@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Libro Editore</title>
+	<link rel="stylesheet" type="text/css" href="libroEditore.css">
+</head>
+<body>
+	<div id="libroEditore">
+		<div id="barMenu">
+			<button id="boldButton" title="Bold"><b>B</b></button>
+			<button id="italicButton" title="Italic"><em>I</em></button>
+			<button id="supButton" title="Super-Script">X<sup>2</sup></button>
+			<button id="subButton" title="Sub-Script">X<sub>2</sub></button>
+			<button id="strikeButton" title="Strikethrough"><s>abc</s></button>
+			<button id="olButton" title="Numbered List">(i)</button>
+			<button id="ulButton" title="Bulleted List">&bull;</button>
+
+			<input type="color" name="font" class="colorInMenu" id="fontColor" title="Change Font Color">
+			<input type="color" name="highlight" class="colorInMenu" id="highlightColor" title="Highlight Text">
+
+			<select id="fontChanger">
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="monospace">Monospace</option>
+				<option value="cursive">Cursive</option>
+				<option value="Calibri">Calibri</option>
+			</select>
+		</div>
+		<div id="editore">
+			<iframe id="editoreFrame" name="textFramed" frameborder="0"></iframe>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="libroEditore.js"></script>
+</body>
+</html>
