@@ -1,7 +1,3 @@
 node_modules
-.travis.yml
 .git
-package.json
-package-lock.json
-out
 .next
