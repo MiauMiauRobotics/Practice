@@ -1,24 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Login from './index';
-import Chat from './chat/chat';
-import SignUp from './sign-up/sign-up';
 import { ContextProvider } from '../context';
-import '../globals.css';
-import '../media-query-700.css';
+import '../public/css/globals.css';
+import '../public/css/media-query-700.css';
+import '../public/css/main-styles.css';
+import '../public/css/channel-list.css';
+import '../public/css/channel.css';
+import '../public/css/chat.css';
+import '../public/css/chat-area.css';
+import '../public/css/chat-wrapper.css';
+import '../public/css/dropdown-menu.css';
+import '../public/css/input.css';
+import '../public/css/logout.css';
+import '../public/css/message.css';
+import '../public/css/nav-chat.css';
+import '../public/css/new-channel-button.css';
+import '../public/css/new-channel-form.css';
+import '../public/css/switch.css';
 
-const App = () => {
+const App = ({ Component, pageProps }) => {
 
 	return (
 	<ContextProvider>
-		<Router basename={ '/text-js' }>
-			<Switch>
-				<Route path="/" exact component={ Login } />
-				<Route path="/signup" exact component={ SignUp } />
-				<Route path="/@me" exact component={ Chat } />
-			</Switch>
-		</Router> 
+		<Component {...pageProps} />
 	</ContextProvider>
 	);
 }

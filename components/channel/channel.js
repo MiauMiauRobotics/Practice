@@ -24,7 +24,7 @@ function Channel({ user, channel_id }) {
 		<li className="channel" >
 			<div className="channel-wrapper">
 				<div className="crop-picture">
-					 <img src={ require("../../assets/img/default.jpg") } alt="profile" className="profile-picture" />
+					 <img src={ "../../public/img/default.jpg" } alt="profile" className="profile-picture" />
 				</div>
 				<div className="channel-preview" onClick={ handleRenderChatArea } >
 					<h2 className="channel-name">{ user }</h2>

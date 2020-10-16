@@ -1,0 +1,29 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "a test",
+  "dependencies": {
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.1.2",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryjperez/practice.git"
+  },
+  "author": "Henry J. Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henryjperez/practice/issues"
+  },
+  "homepage": "https://github.com/henryjperez/practice#readme"
+}

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 import Navigation from '../components/navigation/navigation';
-import imgLight from '../assets/img/dark-mode-false.png';
-import imgDark from '../assets/img/dark-mode-true.png';
+//import imgLight from '../public/img/dark-mode-false.png';
+//import imgDark from '../public/img/dark-mode-true.png';
 
 import { GlobalContext } from '../context';
 // import Switch from '../../components/switch/switch';<img src={ require('../../assets/img/landing-image.png') } alt="log in character" className="main-image" />
@@ -13,8 +13,8 @@ import { URI } from '../config';
 const Login = () => {
 	const { isItDark, setIsItDark } = useContext(GlobalContext);
 	const [fields, setFields] = useState({ username: "", password: "" });
-	const [mainImg, setMainImg] = useState(imgLight);
-	const historyRoute = useHistory();
+	const [mainImg, setMainImg] = useState('../public/img/dark-mode-false.png');
+	const router = useRouter();
 	//destructing "fields" to set each value independently
 	const { username, password } = fields;
 
@@ -25,15 +25,15 @@ const Login = () => {
 	//setting dark mode
 		if (dark == 'true') {
 			setIsItDark(true);
-			setMainImg(imgDark);
+			setMainImg('../public/img/dark-mode-false.png');
 
 		} else if (dark == 'false') {
 			setIsItDark(false);
-			setMainImg(imgLight);
+			setMainImg('../public/img/dark-mode-true.png');
 			
 		} else {
 			setIsItDark(false);
-			setMainImg(imgLight);
+			setMainImg('../public/img/dark-mode-true.png');
 
 		}
 		
@@ -69,7 +69,7 @@ const Login = () => {
 				username: "",
 				password: ""
 			});
-			historyRoute.push('/@me');
+			router.push('/chat');
 
 
 		} catch(err) {

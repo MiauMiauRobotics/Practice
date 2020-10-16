@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 //import './logout.css';
 import { GlobalContext } from '../../context';
 
 
 function LogOut() {
-	const historyRoute = useHistory();
+	const router = useRouter();
 	const { socket,
 			channelRender } = useContext(GlobalContext);
 
@@ -16,7 +16,7 @@ function LogOut() {
 		localStorage.removeItem('token');
 		localStorage.removeItem('username');
 		localStorage.removeItem('user_id');
-		historyRoute.push('/');
+		router.push('/');
 
 	}
 
